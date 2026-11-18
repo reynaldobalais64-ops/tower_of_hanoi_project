@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tower of Hanoi — Mouse Control</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header>
+      <p class="eyebrow">PUZZLE GAME</p>
+      <h1>Tower of Hanoi</h1>
+      <p class="subtitle">Move every disk to Tower C. A larger disk may never sit on a smaller one.</p>
+    </header>
+
+    <section class="toolbar">
+      <label for="diskCount">Disks:</label>
+      <select id="diskCount">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+      <button id="resetBtn" class="reset">Reset game</button>
+      <div class="moves">Moves: <strong id="moveCount">0</strong></div>
+    </section>
+
+    <section class="board" aria-label="Tower of Hanoi game board">
+      <div class="tower" data-tower="0" tabindex="0" aria-label="Tower A">
+        <div class="pole"></div><div class="base"></div><div class="disks"></div>
+        <span class="tower-label">A</span>
+      </div>
+      <div class="tower" data-tower="1" tabindex="0" aria-label="Tower B">
+        <div class="pole"></div><div class="base"></div><div class="disks"></div>
+        <span class="tower-label">B</span>
+      </div>
+      <div class="tower" data-tower="2" tabindex="0" aria-label="Tower C">
+        <div class="pole"></div><div class="base"></div><div class="disks"></div>
+        <span class="tower-label">C</span>
+      </div>
+    </section>
+
+    <p id="message" class="message">Click a tower to pick up its top disk, then click another tower to place it.</p>
+    <footer>Mouse control: click a tower to select a disk, then click the destination tower.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
